@@ -33,7 +33,12 @@ function init() {
 
     window.FirebasePlugin.onNotificationOpen(function (notification) {
         document.getElementById('receivedPush').style.display = 'block';
-        writeToDebugArea('Recevied push: ' + notification);
+        writeToDebugArea('Recevied push!');
+        var alert = notification.aps.alert;
+        var title = alert.title;
+        var body = alert.body;
+        writeToDebugArea("Title: " + title);
+        writeToDebugArea("Body: " + body);
         console.log(notification);
     }, function (error) {
         writeToDebugArea('Error: ' + error);
@@ -95,19 +100,24 @@ function startPush() {
 
 function sendPush() {
     writeToDebugArea("Button pressed!");
-    var FCMToken = document.getElementById('myFCMToken').value;
-    console.log("Writing FCM Token:", FCMToken);
-    firebase.database().ref('testPushNotification').set(FCMToken).then(() => {
-        console.log("Success!");
-        console.log("Finished writing");
+    console.log('Reseting FCM Token:');
+    firebase.database().ref('testPushNotification').set('<MY FCM TOKEN>').then(() => {
+        var FCMToken = document.getElementById('myFCMToken').value;
+        console.log("Writing FCM Token:", FCMToken);
+        firebase.database().ref('testPushNotification').set(FCMToken).then(() => {
+            console.log("Success!");
+            console.log("Finished writing");
+        }).catch(() => {
+            console.log("Something went wrong");
+        });
     }).catch(() => {
-        console.log("Something went wrong");
+        console.log("Error reseting token");
     });
 }
 
 function writeToDebugArea(s) {
     var ele = document.getElementById("debugArea");
-    ele.innerHTML += s;
+    ele.innerHTML = s;
 }
 
 document.addEventListener('deviceready', function() {
