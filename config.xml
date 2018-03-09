@@ -7,12 +7,12 @@
     <author email="support@phonegap.com" href="http://phonegap.com">
         PhoneGap Team
     </author>
-    <content src="https://vivianros.github.io/GamePortalPhonegap/www/auth.html" />
+    <content src="https://vivianros.github.io/GamePortalPhonegap/www/index.html" />
     <preference name="DisallowOverscroll" value="true" />
     <preference name="android-minSdkVersion" value="14" />
     <preference name="AndroidLaunchMode" value="singleTask" />
-	<preference name="AllowInlineMediaPlayback" value="true" />
-	<preference name="DisallowOverscroll" value="true" />
+    <preference name="AllowInlineMediaPlayback" value="true" />
+    <preference name="DisallowOverscroll" value="true" />
     <platform name="android">
         <icon density="ldpi" src="www/res/icon/android/drawable-ldpi-icon.png" />
         <icon density="mdpi" src="www/res/icon/android/drawable-mdpi-icon.png" />
@@ -109,43 +109,44 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-	<plugin name="cordova-plugin-add-swift-support" spec="^1.7.1" />
-	<plugin name="cordova-plugin-battery-status" spec="^1.2.5" />
-	<plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
+    <plugin name="cordova-plugin-add-swift-support" spec="^1.7.1" />
+    <plugin name="cordova-plugin-battery-status" spec="^1.2.5" />
+    <plugin name="cordova-plugin-browsertab" spec="^0.2.0" />
     <plugin name="cordova-plugin-buildinfo" spec="^2.0.1" />
-	<plugin name="cordova-plugin-camera" spec="^2.4.1">
+    <plugin name="cordova-plugin-camera" spec="^2.4.1">
         <variable name="CAMERA_USAGE_DESCRIPTION" value=" " />
         <variable name="PHOTOLIBRARY_USAGE_DESCRIPTION" value=" " />
     </plugin>
-	<plugin name="cordova-plugin-console" spec="^1.1.0" />
-	<plugin name="cordova-plugin-contacts" spec="^3.0.1">
+    <plugin name="cordova-plugin-console" spec="^1.1.0" />
+    <plugin name="cordova-plugin-contacts" spec="^3.0.1">
         <variable name="CONTACTS_USAGE_DESCRIPTION" value="Games Portal wants to use your contacts" />
     </plugin>
-	<plugin name="cordova-plugin-device" spec="^1.1.7" />
+    <plugin name="cordova-plugin-device" spec="^1.1.7" />
     <plugin name="cordova-plugin-dialogs" source="npm" spec="~1.3.3" />
     <plugin name="cordova-plugin-geolocation" spec="^2.4.3">
         <variable name="GEOLOCATION_USAGE_DESCRIPTION" value=" " />
     </plugin>
     <plugin name="cordova-plugin-globalization" source="npm" spec="~1.0.7" />
-	<plugin name="cordova-plugin-file" source="npm" spec="~4.3.3" />
-	<plugin name="cordova-plugin-inappbrowser" spec="^1.7.2" />
-	<plugin name="cordova-plugin-iosrtc" spec="^4.0.2" />
+    <plugin name="cordova-plugin-file" source="npm" spec="~4.3.3" />
+    <plugin name="cordova-plugin-inappbrowser" spec="^1.7.2" />
+    <plugin name="cordova-plugin-iosrtc" spec="^4.0.2" />
     <plugin name="cordova-plugin-media-capture" spec="^1.4.3">
         <variable name="CAMERA_USAGE_DESCRIPTION" value="let me use camera plz!" />
         <variable name="MICROPHONE_USAGE_DESCRIPTION" value="let me use mic plz!" />
-    </plugin>    <plugin name="cordova-plugin-network-information" source="npm" spec="~1.3.3" />
-	<plugin name="cordova-plugin-sms" spec="^1.0.5" />
+    </plugin>
+    <plugin name="cordova-plugin-network-information" source="npm" spec="~1.3.3" />
+    <plugin name="cordova-plugin-sms" spec="^1.0.5" />
     <plugin name="cordova-plugin-vibration" source="npm" spec="~2.1.5" />
     <plugin name="cordova-plugin-whitelist" spec="~1.3.3" />
     <plugin name="cordova-sms-plugin" spec="^0.1.11" />
     <plugin name="cordova-universal-links-plugin" spec="^1.2.1" />
-	<plugin name="com.dbaq.cordova.contactsPhoneNumbers" spec="~0.0.10" />
+    <plugin name="com.dbaq.cordova.contactsPhoneNumbers" spec="~0.0.10" />
     <universal-links>
         <host name="j68c5.app.goo.gl/R1XM" scheme="https" />
         <host name="universalgamemaker.firebaseapp.com" scheme="https">
             <path url="/__/auth/callback" />
         </host>
     </universal-links>
-    <engine name="android" spec="~7.0.0" />
+    <engine name="android" spec="^7.0.0" />
     <engine name="ios" spec="^4.5.4" />
 </widget>

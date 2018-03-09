@@ -486,6 +486,14 @@ module.exports = [
     "clobbers": [
       "cordova.plugins.browsertab"
     ]
+  },
+  {
+    "id": "com.dbaq.cordova.contactsPhoneNumbers.contactsPhoneNumbers",
+    "file": "plugins/com.dbaq.cordova.contactsPhoneNumbers/www/contactsPhoneNumbers.js",
+    "pluginId": "com.dbaq.cordova.contactsPhoneNumbers",
+    "clobbers": [
+      "navigator.contactsPhoneNumbers"
+    ]
   }
 ];
 module.exports.metadata = 
@@ -508,7 +516,11 @@ module.exports.metadata =
   "cordova-sms-plugin": "0.1.11",
   "cordova-plugin-buildinfo": "2.0.1",
   "cordova-universal-links-plugin": "1.2.1",
-  "cordova-plugin-browsertab": "0.2.0"
+  "cordova-plugin-browsertab": "0.2.0",
+  "com.dbaq.cordova.contactsPhoneNumbers": "0.0.10",
+  "cordova-plugin-add-swift-support": "1.7.1",
+  "cordova-plugin-console": "1.1.0",
+  "cordova-plugin-iosrtc": "4.0.2"
 };
 // BOTTOM OF METADATA
 });
